@@ -29,9 +29,9 @@ else:
   pluralMuffin = ""
 
 if numberBagels == 1:
-  pluralBagels = "s"
+  pluralBagel = "s"
 else:
-  pluralBagels = ""
+  pluralBagel = ""
 
 #Total price to pay
 coffeeCost = numberCoffees * 5
@@ -48,7 +48,7 @@ print ('***************************************\n'
 + ' at $5 each: $ ' + str(coffeeCost) + '\n'
  + str(numberMuffins) + ' Muffin' + pluralMuffin
 + ' at $4 each: $ ' + str(muffinCost) + '\n'
- + str(numberBagel) + ' Bagel' + pluralBagel
+ + str(numberBagels) + ' Bagel' + pluralBagel
 + ' at $4 each: $ ' + str(bagelCost) + '\n'
  + '6% tax: $ ' + str(tax) + '\n'
  + '--------- \n'
