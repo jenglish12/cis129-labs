@@ -24,24 +24,24 @@ numberBananas = int(numberBananas)
 
 #Goal is to prevent ordering one coffees or two coffee
 if numberCoffees == 1:
-  pluralCoffee = "s"
-else:
   pluralCoffee = ""
+else:
+  pluralCoffee = "s"
 
 if numberMuffins == 1:
-  pluralMuffin = "s"
-else:
   pluralMuffin = ""
+else:
+  pluralMuffin = "s"
 
 if numberBagels == 1:
-  pluralBagel = "s"
-else:
   pluralBagel = ""
+else:
+  pluralBagel = "s"
 
 if numberBananas == 1:
-  pluralBanana = "s"
-else:
   pluralBanana = ""
+else:
+  pluralBanana = "s"
 
 #Total price to pay
 coffeeCost = numberCoffees * 5
