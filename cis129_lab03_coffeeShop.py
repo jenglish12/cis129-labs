@@ -1,39 +1,46 @@
-print ('***************************************\n
-My Coffee and Muffin Shop\n
-Number of coffees bought?')
+print ('***************************************\n'
+'My Coffee and Muffin Shop\n'
+'Number of coffees bought?')
 
 numberCoffees = input ()
 
-#Combines two steps by printing something while asking for an input
-numberMuffins = input ('Number of muffins bought?')
+print ('Number of muffins bought?')
+
+numberMuffins = input ()
+
+#Convert to int, so that it actually likes math
+numberCoffees = int(numberCoffees)
+numberMuffins = int(numberMuffins)
 
 #Goal is to prevent ordering one coffees or two coffee
 if numberCoffees == 1:
   pluralCoffee = "s"
-else
+else:
   pluralCoffee = ""
 
 if numberMuffins == 1:
   pluralMuffin = "s"
-else
+else:
   pluralMuffin = ""
 
 #Total price to pay
 coffeeCost = numberCoffees * 5
-muffinCost = numberMuffins * 5
+muffinCost = numberMuffins * 4
 subtotal = coffeeCost + muffinCost
-tax = subtotal * 0.06
+tax = subtotal * 6 / 100
 total = subtotal + tax
 
-print ('***************************************\n
-***************************************\n
-My Coffee and Muffin Shop Receipt\n'
-numberCoffees + ' Coffee' + pluralCoffee + ' at $5 each: $ ' + coffeeCost + '\n'
-numberMuffins + ' Muffin' + pluralMuffin + ' at $4 each: $ ' + muffinCost + '\n'
-'6% tax: $ ' + tax + '\n
---------- \n
-Total: $ ' + total + '\n
-***************************************\n
-Have a great day!\n
-\n
-***************************************')
+print ('***************************************\n'
+ + '***************************************\n'
+ + 'My Coffee and Muffin Shop Receipt\n'
+ + str(numberCoffees) + ' Coffee' + pluralCoffee
++ ' at $5 each: $ ' + str(coffeeCost) + '\n'
+ + str(numberMuffins) + ' Muffin' + pluralMuffin
++ ' at $4 each: $ ' + str(muffinCost) + '\n'
+ + '6% tax: $ ' + str(tax) + '\n'
+ + '--------- \n'
+ + 'Total: $ ' + str(total) + '\n'
+ + '***************************************\n'
+ + 'Have a great day!\n'
+ + '\n'
+ + '***************************************')
