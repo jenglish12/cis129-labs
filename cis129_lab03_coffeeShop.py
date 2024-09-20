@@ -12,10 +12,15 @@ print ('Number of bagels bought?')
 
 numberBagels = input ()
 
+print ('Number of bananas bought?')
+
+numberBananas = input ()
+
 #Convert to int, so that it actually likes math
 numberCoffees = int(numberCoffees)
 numberMuffins = int(numberMuffins)
 numberBagels = int(numberBagels)
+numberBananas = int(numberBananas)
 
 #Goal is to prevent ordering one coffees or two coffee
 if numberCoffees == 1:
@@ -33,11 +38,17 @@ if numberBagels == 1:
 else:
   pluralBagel = ""
 
+if numberBananas == 1:
+  pluralBanana = "s"
+else:
+  pluralBanana = ""
+
 #Total price to pay
 coffeeCost = numberCoffees * 5
 muffinCost = numberMuffins * 4
 bagelCost = numberBagels * 3
-subtotal = coffeeCost + muffinCost + bagelCost
+bananaCost = numberBananas * 6
+subtotal = coffeeCost + muffinCost + bagelCost + bananaCost
 tax = subtotal * 6 / 100
 total = subtotal + tax
 
@@ -49,7 +60,9 @@ print ('***************************************\n'
  + str(numberMuffins) + ' Muffin' + pluralMuffin
 + ' at $4 each: $ ' + str(muffinCost) + '\n'
  + str(numberBagels) + ' Bagel' + pluralBagel
-+ ' at $4 each: $ ' + str(bagelCost) + '\n'
++ ' at $3 each: $ ' + str(bagelCost) + '\n'
+ + str(numberBananas) + ' Banana' + pluralBanana
++ ' at $6 each: $ ' + str(bananaCost) + '\n'
  + '6% tax: $ ' + str(tax) + '\n'
  + '--------- \n'
  + 'Total: $ ' + str(total) + '\n'
